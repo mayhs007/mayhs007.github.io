@@ -31,15 +31,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body class="bg-batbg text-white font-sans tracking-wider">
-<header class="flex justify-between items-center p-6 max-w-6xl mx-auto">
-    <h1 class="text-3xl font-bold tracking-widest text-batyellow">Shyam R</h1>
-    <nav class="space-x-6 text-lg tracking-wider text-white">
-        <a class="hover:text-batyellow transition-colors" href="#about">About</a>
-        <a class="hover:text-batyellow transition-colors" href="#skills">Skills</a>
-        <a class="hover:text-batyellow transition-colors" href="#projects">Projects</a>
-        <a class="hover:text-batyellow transition-colors" href="#contact">Contact</a>
-    </nav>
+<header class="bg-batgray text-white">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-6">
+        <h1 class="text-3xl font-bold tracking-widest text-batyellow">Shyam R</h1>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuToggle" class="lg:hidden text-white focus:outline-none">
+            ☰
+        </button>
+
+        <!-- Navigation -->
+        <nav id="navMenu" class="hidden lg:flex space-x-6 text-xl tracking-wider">
+            <a class="hover:text-batyellow transition-colors" href="#about">About</a>
+            <a class="hover:text-batyellow transition-colors" href="#skills">Skills</a>
+            <a class="hover:text-batyellow transition-colors" href="#projects">Projects</a>
+            <a class="hover:text-batyellow transition-colors" href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobileMenu" class="lg:hidden hidden flex-col items-center space-x-4 p-6">
+        <a class="hover:text-batyellow text-xl transition-colors" href="#about">About</a>
+        <a class="hover:text-batyellow text-xl transition-colors" href="#skills">Skills</a>
+        <a class="hover:text-batyellow text-xl transition-colors" href="#projects">Projects</a>
+        <a class="hover:text-batyellow text-xl transition-colors" href="#contact">Contact</a>
+    </div>
 </header>
+
 <section class="py-16 px-6 text-center bg-batbg" id="about">
     <h2 class="text-4xl font-bold tracking-widerst mb-10 text-batyellow">About Me</h2>
     <div class="max-w-3xl mx-auto text-lg leading-relaxed tracking-wider text-white ">
@@ -152,7 +170,7 @@
                 onclick="showTab('jhaiho')">
                 Jhaiho
             </li>
-            <li class="px-6 py-3 bg-black text-white hover:bg-batyellow hover:text-black cursor-pointer transition-colors" id="tab-jhaiho"
+            <li class="px-6 py-3 bg-black text-white hover:bg-batyellow hover:text-black cursor-pointer transition-colors" id="tab-others"
                 onclick="showTab('others')">
                 Others
             </li>
@@ -280,6 +298,76 @@
         </div>
     </div>
     <div class="tab-content hidden grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16" id="others">
+        <div class="bg-batgray p-6 rounded-lg text-left shadow-2xl border border-gray-700 text-white tracking-wider">
+            <h3 class="text-2xl text-batyellow mb-4 font-semibold tracking-wider">Agrosquire – Farming Simulation Game</h3>
+            <p class="mb-2 text-2xl"><strong>Situation:</strong> Wanted to build a self-contained farming simulation game to explore game mechanics, user engagement, and performance optimization.</p>
+            <p class="mb-2 text-2xl"><strong>Task:</strong> Design and develop a full-featured 2D farming simulation using Unity and C# with features like crop cycles, inventory, and in-game economy.</p>
+            <p class="mb-2 text-2xl"><strong>Action:</strong> Created core gameplay loop using Unity Engine, implemented crop logic, player interactions, inventory system, UI overlays, and state management using C#. Used Unity Asset Store and custom sprites to design the game world.</p>
+            <p class="mb-2 text-2xl"><strong>Result:</strong> Completed a fully playable demo with optimized performance, showing expertise in game development, OOP design in C#, and Unity-based UI/UX systems.</p>
+
+            <div class="mt-4">
+                <a class="inline-block text-batyellow text-xl font-semibold hover:underline hover:text-yellow-300 transition" href="./pages/agrosquire.html" target="_blank">
+                    🎮 View More Details
+                </a>
+            </div>
+        </div>
+        <div class="bg-batgray p-6 rounded-lg text-left shadow-2xl border border-gray-700 text-white tracking-wider">
+            <h3 class="text-2xl text-batyellow mb-4 font-semibold tracking-wider">Seminar Hall Booking System</h3>
+            <p class="mb-2 text-2xl">
+                <strong>Situation:</strong> Colleges lacked a centralized way to manage and track seminar hall bookings, often relying on offline or inconsistent systems.
+            </p>
+            <p class="mb-2 text-2xl">
+                <strong>Task:</strong> Develop a web-based platform to handle booking requests, approvals, and schedules for seminar halls.
+            </p>
+            <p class="mb-2 text-2xl">
+                <strong>Action:</strong> Built a Laravel-based application with role-based access, dynamic booking forms, and admin dashboards to monitor usage.
+            </p>
+            <p class="mb-2 text-2xl">
+                <strong>Result:</strong> Streamlined the booking process, minimized scheduling conflicts, and provided full transparency over hall availability.
+            </p>
+            <div class="mt-4">
+                <a class="inline-block text-batyellow text-xl font-semibold hover:underline hover:text-yellow-300 transition"
+                   href="https://github.com/mayhs007/SeminarHallBooking" target="_blank">
+                    🔍 View Code on GitHub
+                </a>
+            </div>
+        </div>
+        <div class="bg-batgray p-6 rounded-lg text-left shadow-2xl border border-gray-700 text-white tracking-wider">
+            <h3 class="text-2xl text-batyellow mb-4 font-semibold tracking-wider">Banking Application</h3>
+            <p class="mb-2 text-2xl"><strong>Tech Stack:</strong> Python, CGI, HTML, SQLite</p>
+            <p class="mb-2 text-2xl"><strong>Overview:</strong> A lightweight web-based banking app allowing users to create accounts, deposit, withdraw, and check balances.</p>
+            <p class="mb-2 text-2xl"><strong>Features:</strong> Session-based login, transaction tracking, and simple web UI built using CGI scripting.</p>
+            <p class="mb-2 text-2xl"><strong>Learning Outcome:</strong> Reinforced low-level web development, form handling, and backend processing using native Python.</p>
+            <div class="mt-4">
+                <a class="inline-block text-batyellow text-xl font-semibold hover:underline hover:text-yellow-300 transition"
+                   href="https://github.com/mayhs007/PythonCGI" target="_blank">
+                    🔍 View Code on GitHub
+                </a>
+            </div>
+        </div>
+        <div class="bg-batgray p-6 rounded-lg text-left shadow-2xl border border-gray-700 text-white tracking-wider">
+            <h3 class="text-2xl text-batyellow mb-4 font-semibold tracking-wider">College Event Management Tool</h3>
+            <p class="mb-2 text-2xl">
+                <strong>Situation:</strong> Managing college events involved scattered spreadsheets, manual registrations, and attendance tracking, leading to inefficiencies.
+            </p>
+            <p class="mb-2 text-2xl">
+                <strong>Task:</strong> Build an all-in-one event management solution to handle registration, attendance, and result tracking.
+            </p>
+            <p class="mb-2 text-2xl">
+                <strong>Action:</strong> Developed a comprehensive tool with modules for event registration, QR-based attendance, winner tagging, and data export. Designed UI for easy navigation and built role-based access for organizers and admins.
+            </p>
+            <p class="mb-2 text-2xl">
+                <strong>Result:</strong> Streamlined event logistics for multiple departments, improved participant management, and reduced human error in winner tracking.
+            </p>
+            <!-- Optional View More link -->
+            <div class="mt-4">
+                <a class="inline-block text-batyellow text-xl font-semibold hover:underline hover:text-yellow-300 transition"
+                   href="https://github.com/mayhs007/gyanmitra19-backend" target="_blank">
+                    🔍 View Code on GitHub
+                </a>
+            </div>
+        </div>
+
 
     </div>
 </section>
@@ -296,7 +384,7 @@
 </body>
 <script>
     function showTab(tabId) {
-        const tabs = ['hpe', 'jhaiho'];
+        const tabs = ['hpe', 'jhaiho','others'];
 
         tabs.forEach(id => {
             const tabContent = document.getElementById(id);
@@ -317,6 +405,15 @@
     // Optional: Set default tab on load
     window.addEventListener('DOMContentLoaded', () => {
         showTab('hpe'); // default tab
+    });
+
+</script>
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
     });
 </script>
 </html>
