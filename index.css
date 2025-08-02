@@ -1,0 +1,8 @@
+html {
+    font-size: 22px; /* You can adjust this value to scale the entire site */
+}
+
+body {
+    line-height: 1.6;
+    font-size: 2rem; /* Equals 18px based on html */
+}
